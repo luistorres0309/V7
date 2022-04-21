@@ -190,14 +190,6 @@ def processFile(update,bot,message,file,thread=None,jdb=None):
     else:
         bot.editMessageText(message,'âŒError En La Paginaâ„1¤7')
 
-def ddl(update,bot,message,url,file_name='',thread=None,jdb=None):
-    downloader = Downloader()
-    file = downloader.download_url(url,progressfunc=downloadFile,args=(bot,message,thread))
-    if not downloader.stoping:
-        if file:
-            processFile(update,bot,message,file,jdb=jdb)
-        else:
-            megadl(update,bot,message,url,file_name,thread,jdb=jdb)
 
 
 
